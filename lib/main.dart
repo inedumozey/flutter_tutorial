@@ -1,6 +1,6 @@
-import 'package:fltr/trianglePage.dart';
+import 'package:fltr/button.dart';
+import 'package:fltr/flex.dart';
 import 'package:flutter/material.dart';
-import "package:fltr/containerPage.dart";
 
 void main() => runApp(MyApp());
 
@@ -13,7 +13,27 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         brightness: Brightness.dark,
       ),
-      home: ContainerPage(),
+      home: Center(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Btn(
+              borderColor: Colors.black,
+              textColor: Colors.black,
+              bgColor: const Color.fromARGB(255, 234, 232, 232),
+              text: "1",
+            ),
+            Btn(
+                borderColor: Colors.black,
+                textColor: Colors.white,
+                bgColor: Colors.black,
+                isIcon: true,
+                icon: Icons.person_off_outlined,
+                size: 60,
+                radius: 100)
+          ],
+        ),
+      ),
     );
   }
 }
